@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JavaScript Program Basics</title>
+    <!-- <script>
+        const array = []
+
+        function theCount() {
+            for (let i = 0; i < 11; i++) {
+                if (i % 2 == 0) {
+                    array.push(i)
+                    //= "Count " + i + " is even. " 
+                    //document.getElementById("count").innerHTML = counteven
+                    //console.log(counteven)
+                    //array.forEach(e => console.log(e));
+
+                } else {
+                    array.push(i)
+                    //countodd = "Count " + i + " is odd. " 
+                    //document.getElementById("count").innerHTML = countodd
+                    //console.log(countodd)
+                }
+            }
+            array.forEach(function(value){
+        document.write("<p>" + value + "</p>");
+    });}
+        
+    </script> -->
+
+</head>
+
+<body>
+    <script>
+        const array = []
+
+        function theCount() {
+            for (let i = 0; i < 11; i++) {
+                if (i % 2 == 0) {
+                    array.push("Count " + i + " is even")
+                    //= "Count " + i + " is even. " 
+                    //document.getElementById("count").innerHTML = counteven
+                    //console.log(counteven)
+                    //array.forEach(e => console.log(e));
+
+                } else {
+                    array.push("Count " + i + " is odd")
+                    //countodd = "Count " + i + " is odd. " 
+                    //document.getElementById("count").innerHTML = countodd
+                    //console.log(countodd)
+                }
+            }
+            let list = document.getElementById("arrPrint");
+            array.forEach((item) => {
+                let li = document.createElement("p");
+                li.innerHTML = item;
+                list.appendChild(li);
+            })
+        }
+
+    </script>
+    <ul Id="arrPrint"></ul>
+    <button onclick=theCount()>Get the count</button><br><br>
+    <p>Enter in a number between 5-20</p>
+    <input Id="number"></input>
+    <p Id="timer"></p>
+    <script>
+        function counter() {
+            number = document.getElementById('number').value
+
+            var text = ""
+            var i = 1;
+
+            do {
+                text += "<br>The number is now " + i;
+                i++;
+            }
+            while (i <= number);
+
+            document.getElementById("timer").innerHTML = text;
+        }
+    </script>
+    <button onClick=counter()>Submit</button>
+    <p Id="subjects"></p>
+    <script>
+        let text = ""
+        var subjects = ["Accounting", 'Algebra', 'Programming', 'Art', 'Data Analytics']
+        subjects.forEach(myFunction);
+        document.getElementById("subjects").innerHTML = text;
+        function myFunction(item, index) {
+            text += item + ", ";
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
